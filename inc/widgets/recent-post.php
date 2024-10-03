@@ -125,7 +125,12 @@ if ( !class_exists('Masonry_Grid_Sidebar_Recent_Post_Widget') ) :
                                         $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'medium' );
                                         $featured_image = isset( $featured_image[0] ) ? $featured_image[0] : ''; ?>
 
-                                        <a href="<?php the_permalink(); ?>" class="data-bg data-bg-thumbnail" data-background="<?php echo esc_url( $featured_image ); ?>"></a>
+                                        <a 
+                                            href="<?php the_permalink(); ?>" 
+                                            class="data-bg data-bg-thumbnail" 
+                                            aria-label="<?php the_title(); ?>"
+                                            data-background="<?php echo esc_url( $featured_image ); ?>">
+                                        </a>
 
                                         <?php if ( true === $params['enable_counter'] ) { ?>
                                             <div class="trend-item">
@@ -139,7 +144,10 @@ if ( !class_exists('Masonry_Grid_Sidebar_Recent_Post_Widget') ) :
                                 <div class="column column-8">
                                     <div class="article-body">
                                         <h3 class="entry-title entry-title-small">
-                                            <a href="<?php the_permalink(); ?>">
+                                            <a 
+                                                href="<?php the_permalink(); ?>"
+                                                aria-label="<?php the_title(); ?>"
+                                                >
                                                 <?php the_title(); ?>
                                             </a>
                                         </h3>

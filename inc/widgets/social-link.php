@@ -160,14 +160,18 @@ if ( !class_exists( 'Masonry_Grid_Social_Link_widget' ))  :
                 <ul class="social-widget-wrapper">
                     <?php if ( !empty( $params['url-fb'] ) ) { ?>
                         <li>
-                            <a href="<?php echo esc_url($params['url-fb']); ?>" target="_blank">
+                            <a 
+                                href="<?php echo esc_url($params['url-fb']); ?>" 
+                                target="_blank">
                               <?php masonry_grid_the_theme_svg('facebook'); ?>
                             </a>
                         </li>
                     <?php } ?>
                     <?php if ( !empty( $params['url-tw'] ) ) { ?>
                         <li>
-                            <a href="<?php echo esc_url($params['url-tw']); ?>" target="_blank">
+                            <a 
+                                href="<?php echo esc_url($params['url-tw']); ?>" 
+                                target="_blank">
                               <?php masonry_grid_the_theme_svg('twitter'); ?>
                             </a>
                         </li>

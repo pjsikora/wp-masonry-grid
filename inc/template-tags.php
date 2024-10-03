@@ -136,7 +136,7 @@ if( !function_exists('masonry_grid_posted_on') ):
             $month = get_the_date('m');
             $day = get_the_date('d');
             $link = get_day_link($year, $month, $day);
-            $posted_on = '<a href="' . esc_url($link) . '" rel="bookmark">' . $time_string . '</a>';
+            $posted_on = '<a href="' . esc_url($link) . '" rel="bookmark" aria-label="'.$time_string.'">' . $time_string . '</a>';
 
             echo '<div class="entry-meta-item entry-meta-date">' . $posted_on . '</div>'; // WPCS: XSS OK.
 

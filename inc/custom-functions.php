@@ -581,7 +581,10 @@ if( !function_exists('masonry_grid_recent_posts_search') ):
                         <div class="search-recent-article-list">
                             <header class="entry-header">
                                 <h3 class="entry-title entry-title-small">
-                                    <a href="<?php the_permalink(); ?>" rel="bookmark">
+                                    <a 
+                                        href="<?php the_permalink(); ?>" 
+                                        rel="bookmark"
+                                        aria-label="<?php the_title(); ?>">
                                         <?php the_title(); ?>
                                     </a>
                                 </h3>
@@ -662,7 +665,10 @@ if( !function_exists('masonry_grid_carousel_section') ):
                                                 $featured_image = isset($featured_image[0]) ? $featured_image[0] : ''; ?>
 
                                                 <div class="entry-thumbnail">
-                                                    <a href="<?php the_permalink(); ?>" class="data-bg data-bg-big" data-background="<?php echo esc_url( $featured_image ); ?>">
+                                                    <a 
+                                                        href="<?php the_permalink(); ?>" 
+                                                        class="data-bg data-bg-big" 
+                                                        data-background="<?php echo esc_url( $featured_image ); ?>">
                                                         <span class="entry-thumbnail-overlay"></span>
                                                     </a>
 
@@ -686,10 +692,11 @@ if( !function_exists('masonry_grid_carousel_section') ):
 
                                                         <h2 class="entry-title entry-title-xsmall">
 
-                                                            <a href="<?php the_permalink(); ?>">
-
+                                                            <a 
+                                                                href="<?php the_permalink(); ?>"
+                                                                aria-label="<?php the_title(); ?>"
+                                                                >
                                                                 <?php the_title(); ?>
-
                                                             </a>
                                                         </h2>
 
@@ -801,14 +808,20 @@ if( !function_exists('masonry_grid_header_search_top_cat_content') ):
                                         <div class="entry-wrapper">
                                             <?php if ($twp_term_image) { ?>
                                                 <div class="entry-thumbnail">
-                                                    <a href="<?php echo esc_url($cat_link); ?>" class="data-bg data-bg-medium" data-background="<?php echo esc_url($twp_term_image); ?>"></a>
+                                                    <a 
+                                                        href="<?php echo esc_url($cat_link); ?>" 
+                                                        class="data-bg data-bg-medium" 
+                                                        data-background="<?php echo esc_url($twp_term_image); ?>"></a>
                                                 </div>
                                             <?php } ?>
 
                                             <div class="post-content">
                                                 <header class="entry-header">
                                                     <h3 class="entry-title">
-                                                        <a href="<?php echo esc_url($cat_link); ?>">
+                                                        <a 
+                                                            href="<?php echo esc_url($cat_link); ?>"
+                                                            aria-label="<?php echo esc_url($cat_name); ?>"
+                                                            >
                                                             <?php echo esc_html($cat_name); ?>
                                                         </a>
                                                     </h3>
@@ -1080,7 +1093,11 @@ if( !function_exists('masonry_grid_footer_go_to_top') ):
     // Scroll to Top render content
     function masonry_grid_footer_go_to_top(){ ?>
 
-        <a class="to-the-top theme-action-control" href="#site-header">
+        <a 
+            class="to-the-top theme-action-control" 
+            href="#site-header"
+            aria-label="<?php printf(esc_html__('To the Top %s', 'masonry-grid')) ?>"
+            >
             <span class="action-control-trigger" tabindex="-1">
                 <span class="to-the-top-long">
                     <?php printf(esc_html__('To the Top %s', 'masonry-grid'), '<span class="arrow" aria-hidden="true">&uarr;</span>'); ?>
@@ -1348,7 +1365,10 @@ if( !function_exists('masonry_grid_video_content_render') ):
 
                     <div class="entry-thumbnail">
 
-                        <a href="<?php the_permalink(); ?>">
+                        <a 
+                            href="<?php the_permalink(); ?>"
+                            aria-label="<?php the_title(); ?>"
+                            >
                             <?php
                             the_post_thumbnail('medium_large', array(
                                 'alt' => the_title_attribute(array(
@@ -1384,7 +1404,10 @@ if( !function_exists('masonry_grid_video_content_render') ):
                     <header class="entry-header">
 
                         <h2 class="entry-title entry-title-small">
-                            <a href="<?php the_permalink(); ?>">
+                            <a 
+                                href="<?php the_permalink(); ?>"
+                                aria-label="<?php the_title(); ?>"
+                                >
                                 <?php the_title(); ?>
                             </a>
                         </h2>

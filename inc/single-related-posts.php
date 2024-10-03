@@ -69,8 +69,13 @@ if( !function_exists('masonry_grid_related_posts') ):
 
                                         <div class="column column-4">
                                             <div class="entry-thumbnail">
-                                                <a href="<?php the_permalink(); ?>" >
-                                                    <span class="data-bg data-bg-small" data-background="<?php echo esc_url( $featured_image ); ?>"> </span>
+                                                <a 
+                                                    href="<?php the_permalink(); ?>" 
+                                                    aria-label="<?php the_title(); ?>">
+                                                    <span 
+                                                        class="data-bg data-bg-small" 
+                                                        data-background="<?php echo esc_url( $featured_image ); ?>"> 
+                                                    </span>
                                                 </a>
                                             </div>
                                         </div>
@@ -86,7 +91,10 @@ if( !function_exists('masonry_grid_related_posts') ):
                                             
                                             <header class="entry-header">
                                                 <h3 class="entry-title entry-title-small">
-                                                    <a href="<?php the_permalink(); ?>" rel="bookmark">
+                                                    <a 
+                                                        href="<?php the_permalink(); ?>" 
+                                                        aria-label="<?php the_title(); ?>"
+                                                        rel="bookmark">
                                                         <?php the_title(); ?>
                                                     </a>
                                                 </h3>
